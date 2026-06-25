@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Admin Bio Cyberpunk</title>
+  <meta name="description" content="Admin panel link in bio premium cyberpunk.">
+  <meta name="theme-color" content="#00d9ff">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body class="admin-body">
+  <div class="bg-stage">
+    <div class="gradient-layer"></div>
+    <canvas id="particles"></canvas>
+    <div class="floating-shapes"><span class="shape"></span><span class="shape"></span><span class="shape"></span></div>
+  </div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <section class="login-screen" id="loginScreen">
+    <div class="card login-card">
+      <h1>ADMIN ACCESS</h1>
+      <p class="bio">Masukkan PIN yang tersimpan di Firebase Realtime Database.</p>
+      <div class="field"><input class="pin-input" id="pinInput" type="password" inputmode="numeric" maxlength="12" placeholder="••••••"></div>
+      <div class="inline-actions" style="justify-content:center"><button class="admin-btn primary" id="loginBtn">Login</button></div>
+      <p class="username" id="loginMessage"></p>
+    </div>
+  </section>
+
+  <section class="admin-layout hidden" id="adminApp">
+    <aside class="sidebar">
+      <div class="brand"><h2>CEYPEEPUNG OS</h2><p class="username">Realtime Firebase</p></div>
+      <button class="nav-btn active" data-tab="dashboard">Dashboard</button>
+      <button class="nav-btn" data-tab="setting">Setting</button>
+      <button class="nav-btn" data-tab="profile">Profile</button>
+      <button class="nav-btn" data-tab="links">Links</button>
+      <button class="nav-btn" data-tab="theme">Theme</button>
+      <button class="nav-btn" data-tab="background">Background</button>
+      <button class="nav-btn" data-tab="media">Media</button>
+      <button class="nav-btn" data-tab="analytics">Analytics</button>
+      <button class="nav-btn" data-tab="backup">Backup</button>
+      <button class="nav-btn" data-tab="database">Database</button>
+    </aside>
+
+    <main class="admin-main">
+      <div class="admin-top">
+        <div><h1 id="adminTitle">Dashboard</h1><p class="username" id="saveState">Realtime autosave aktif</p></div>
+        <div class="inline-actions"><button class="admin-btn ghost" id="previewBtn">Preview</button><button class="admin-btn danger" id="logoutBtn">Logout</button></div>
+      </div>
+      <div id="tabContent" class="fade-in"></div>
+    </main>
+  </section>
+
+  <div class="toast" id="toast"></div>
+  <script type="module" src="admin.js"></script>
+</body>
+</html>

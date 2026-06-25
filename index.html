@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Ceypeepung Bio</title>
+  <meta name="description" content="Premium cyberpunk link in bio creator page.">
+  <meta name="theme-color" content="#00d9ff">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ceypeepung Bio">
+  <meta property="og:description" content="Premium cyberpunk link in bio creator page.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1400&q=85">
+  <meta property="og:url" content="/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ceypeepung Bio">
+  <meta name="twitter:description" content="Premium cyberpunk link in bio creator page.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.google.com">
+  <link rel="preload" href="styles.css" as="style">
+  <link rel="stylesheet" href="styles.css">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+  <div class="loader" id="loader" aria-label="Loading">
+    <div class="loader-core"></div>
+    <div class="loader-text">SYNCING BIO</div>
+  </div>
+
+  <div class="bg-stage" id="bgStage">
+    <div class="gradient-layer" id="gradientLayer"></div>
+    <img class="bg-image hidden" id="bgImage" alt="Background" loading="lazy" decoding="async">
+    <video class="bg-video hidden" id="bgVideo" playsinline webkit-playsinline preload="auto" muted loop></video>
+    <canvas id="particles"></canvas>
+    <div class="floating-shapes"><span class="shape"></span><span class="shape"></span><span class="shape"></span></div>
+  </div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <audio id="bgAudio" preload="auto"></audio>
+
+  <main class="app-shell fade-in">
+    <section class="card hero-card" aria-label="Profile">
+      <div class="banner" id="banner"></div>
+      <div class="profile-wrap">
+        <div class="avatar-ring"><img class="avatar" id="avatar" alt="Foto profil" loading="lazy" decoding="async"></div>
+        <div class="name-row"><h1 id="displayName">Loading...</h1><span class="verified hidden" id="verifiedBadge">✓</span></div>
+        <div class="username" id="username">@username</div>
+        <p class="bio" id="bio">Mengambil data realtime dari Firebase...</p>
+        <div class="stat-grid">
+          <div class="stat"><strong id="followers">0</strong><span>Followers</span></div>
+          <div class="stat"><strong id="views">0</strong><span>Views</span></div>
+          <div class="stat"><strong id="totalClicks">0</strong><span>Clicks</span></div>
+        </div>
+        <div class="meta-row"><span><i class="online-dot"></i> <span id="statusText">Online</span></span><span>•</span><span id="location">Cyber City</span></div>
+        <div class="action-row">
+          <button class="btn" id="shareBtn">Share</button>
+          <button class="btn" id="copyBtn">Copy Link</button>
+          <button class="btn" id="audioBtn">Audio</button>
+        </div>
+        <div class="social-grid" id="socialGrid" aria-label="Social media"></div>
+      </div>
+    </section>
+
+    <h2 class="section-title">Featured Links</h2>
+    <section class="links-list" id="linksList" aria-live="polite">
+      <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
+    </section>
+
+    <h2 class="section-title">Profile QR</h2>
+    <section class="card qr-box"><div id="qrCode"></div></section>
+  </main>
+
+  <div class="toast" id="toast"></div>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js" defer></script>
+  <script type="module" src="user.js"></script>
+</body>
+</html>

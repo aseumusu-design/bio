@@ -1,0 +1,14 @@
+{
+  "name": "Ceypeepung Premium Bio",
+  "short_name": "Ceypeepung",
+  "description": "Premium cyberpunk link in bio creator page.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#020612",
+  "theme_color": "#00d9ff",
+  "icons": [
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
